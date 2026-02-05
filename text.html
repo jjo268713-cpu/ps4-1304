@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PS4 13.04 Research Suite</title>
+    <style>
+        :root { --neon: #00d4ff; --bg: #050505; }
+        body { background: var(--bg); color: var(--neon); font-family: 'Courier New', monospace; text-align: center; }
+        .box { border: 1px solid var(--neon); margin: 20px auto; width: 80%; padding: 20px; box-shadow: 0 0 15px var(--neon); }
+        .btn { border: 1px solid var(--neon); background: transparent; color: var(--neon); padding: 10px 20px; cursor: pointer; }
+        .btn:hover { background: var(--neon); color: var(--bg); }
+        #log { text-align: left; height: 200px; overflow-y: scroll; font-size: 12px; border-top: 1px solid #333; padding: 10px; }
+        .status-active { color: #fff; text-shadow: 0 0 5px #fff; }
+    </style>
+</head>
+<body>
+    <h1>SYSTEM_EXPLOIT_V13.04</h1>
+    <div class="box">
+        <div>STATUS: <span id="status" class="status-active">READY</span></div>
+        <p>IP: 192.168.12.69 | PORT: 8080</p>
+        <button class="btn" onclick="startChain()">EXECUTE EXPLOIT CHAIN</button>
+        <button class="btn" onclick="toggleAuto()">AUTO-RETRY: <span id="autoTxt">OFF</span></button>
+    </div>
+    <div class="box" id="log">
+        [SYSTEM] Waiting for user input...<br>
+    </div>
+
+    <script src="psfree_1304.js"></script>
+    <script>
+        let autoRetry = false;
+        function toggleAuto() { 
+            autoRetry = !autoRetry; 
+            document.getElementById('autoTxt').innerText = autoRetry ? "ON" : "OFF";
+        }
+
+        function startChain() {
+            document.getElementById('status').innerText = "RUNNING...";
+            // This calls the improved logic in your js file
+            try { 
+                runPSFree1304(); 
+            } catch(e) {
+                if(autoRetry) setTimeout(startChain, 3000);
+            }
+        }
+    </script>
+</body>
+</html>
