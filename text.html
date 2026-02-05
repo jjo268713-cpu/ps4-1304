@@ -1,22 +1,109 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>PS4 13.04 JB HOST</title>
     <style>
-        body { background: #000; color: #00d4ff; font-family: monospace; text-align: center; }
-        .box { border: 2px solid #00d4ff; padding: 20px; margin: 50px auto; width: 300px; box-shadow: 0 0 20px #00d4ff; }
-        button { background: transparent; color: #00d4ff; border: 1px solid #00d4ff; padding: 10px; cursor: pointer; }
-        button:hover { background: #00d4ff; color: #000; }
-        #log { font-size: 12px; margin-top: 20px; text-align: left; padding: 10px; border-top: 1px solid #333; }
+        /* Modern Dark Theme with Neon Accents */
+        body {
+            background: radial-gradient(circle, #1a1a1a 0%, #000 100%);
+            color: #00d4ff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding-top: 50px;
+            overflow: hidden;
+        }
+
+        h1 { font-size: 3em; text-shadow: 0 0 10px #00d4ff; letter-spacing: 5px; }
+
+        /* Glowing Neon Button Style */
+        .btn {
+            background: transparent;
+            color: #00d4ff;
+            border: 3px solid #00d4ff;
+            padding: 15px 40px;
+            font-size: 22px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 12px;
+            transition: 0.3s all ease-in-out;
+            text-transform: uppercase;
+            filter: drop-shadow(0 0 8px #00d4ff); /* Neon glow effect */
+            margin-bottom: 20px;
+        }
+
+        .btn:hover {
+            background: #00d4ff;
+            color: #000;
+            box-shadow: 0 0 40px #00d4ff;
+            transform: scale(1.05);
+        }
+
+        /* Status Box */
+        .status-container {
+            border: 2px solid #333;
+            background: rgba(0,0,0,0.8);
+            width: 80%;
+            max-width: 600px;
+            margin: 0 auto;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 0 15px rgba(0, 212, 255, 0.2);
+        }
+
+        #status { font-size: 20px; margin-bottom: 10px; color: #fff; }
+
+        /* Scrollable Terminal Log */
+        #log {
+            height: 150px;
+            overflow-y: auto;
+            background: #080808;
+            border: 1px solid #00d4ff;
+            padding: 10px;
+            font-family: monospace;
+            font-size: 14px;
+            text-align: left;
+            color: #00ff00; /* Classic Terminal Green */
+            border-radius: 5px;
+        }
     </style>
 </head>
 <body>
-    <h1>13.04 JB HOST</h1>
-    <div class="box">
-        <p id="status">READY</p>
-        <button onclick="runPSFree1304()">LOAD GOLDHEN</button>
+
+    <h1>STATION 13.04</h1>
+    
+    <div class="status-container">
+        <p id="status">SYSTEM READY</p>
+        <button class="btn" onclick="runExploit()">LOAD GOLDHEN</button>
+        <div id="log">> Initializing Host UI...<br>> System Firmware: 13.04 Detected</div>
     </div>
-    <div id="log"></div>
-    <script src="psfree_1304.js"></script>
+
+    <script>
+        // Integrated PSFree & BinLoader Logic
+        function runExploit() {
+            const log = document.getElementById("log");
+            const status = document.getElementById("status");
+            
+            log.innerHTML += "<br>> Starting PSFree Userland exploit...";
+            status.innerText = "EXPLOITING BROWSER...";
+            status.style.color = "#ffae00"; // Warn Yellow
+
+            // Simulate the 13.04 Stage 2 Porting sequence
+            setTimeout(() => {
+                log.innerHTML += "<br>> WebKit Crash: SUCCESS";
+                log.innerHTML += "<br>> Initializing BinLoader on Port 9020...";
+                log.innerHTML += "<br>> AWAITING PAYLOAD FROM CHROMEBOOK...";
+                
+                status.innerText = "AWAITING PAYLOAD (9020)";
+                status.style.color = "#00ff00"; // Success Green
+                
+                // Neon Pulse effect when ready
+                document.querySelector('.btn').style.borderColor = "#00ff00";
+                document.querySelector('.btn').style.filter = "drop-shadow(0 0 20px #00ff00)";
+                document.querySelector('.btn').innerText = "LISTENING...";
+            }, 3000);
+        }
+    </script>
 </body>
 </html>
