@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Network Infrastructure - Internal Audit</title>
+    <link rel="icon" type="image/x-icon" href="https://ssl.gstatic.com/docs/doclist/images/infinite_drive_2022q4.ico">
+    <style>
+        :root {
+            --bg: #0b0e14;
+            --card-bg: rgba(25, 30, 40, 0.7);
+            --accent: #00f2ff;
+            --text-main: #e0e6ed;
+            --text-dim: #94a3b8;
+        }
+
+        body {
+            margin: 0;
+            background: var(--bg);
+            color: var(--text-main);
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Professional Header */
+        header {
+            padding: 2rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(11, 14, 20, 0.8);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            color: var(--accent);
+            text-transform: uppercase;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Interactive Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            border-color: var(--accent);
+            transform: translateY(-5px);
+            background: rgba(0, 242, 255, 0.05);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .card h3 {
+            margin: 0 0 0.5rem 0;
+            font-size: 1.1rem;
+            color: var(--accent);
+        }
+
+        .card p {
+            margin: 0;
+            font-size: 0.9rem;
+            color: var(--text-dim);
+        }
+
+        /* Stealth Masking Content */
+        .academic-mask {
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text-dim);
+            font-size: 0.95rem;
+            line-height: 1.8;
+            max-width: 800px;
+        }
+
+        /* Panic Button UI */
+        #panic-ui {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: #fff;
+            color: #000;
+            z-index: 9999;
+            padding: 100px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body onkeydown="if(event.key==='Escape') panic()">
+
+    <header>
+        <div class="logo">INSTETLLER SYSTEM</div>
+    </header>
+
+    <div class="container" id="main-view">
+        <div class="grid">
+            <div class="card" onclick="launch('https://classlink.tokeslaszlo.ro/main/https://now.gg/apps/roblox-corporation/5349/roblox.html')">
+                <h3>Node-Alpha</h3>
+                <p>Primary Cloud Virtualization (Roblox Mirror)</p>
+            </div>
+
+            <div class="card" onclick="launch('https://educationalmath.fundacionciencomart.org.ar/main/https://www.crazygames.com')">
+                <h3>Node-Beta</h3>
+                <p>Distributed Logic Processing (Crazy Games)</p>
+            </div>
+
+            <div class="card" onclick="launch('https://gnhustgames.github.io/granny-online/')">
+                <h3>Node-Gamma</h3>
+                <p>Legacy Survival Module (Granny Online)</p>
+            </div>
+
+            <div class="card" onclick="launch('https://caffeine.boba.org')">
+                <h3>Proxy Mirror 01</h3>
+                <p>Boba-Network Encryption Tunnel</p>
+            </div>
+            <div class="card" onclick="launch('https://costly.ryabikin.com')">
+                <h3>Proxy Mirror 02</h3>
+                <p>Ryabikin Secure Gateway</p>
+            </div>
+            <div class="card" onclick="launch('https://bull-arena.bergbahnen-bezau.at')">
+                <h3>Regional Node</h3>
+                <p>Secondary Ghost Protocol</p>
+            </div>
+        </div>
+
+        <article class="academic-mask">
+            <h2>2026 Analysis of Global Content Delivery Networks</h2>
+            <p>Content Delivery Networks (CDNs) have evolved significantly to handle the massive influx of 8K streaming and real-time cloud gaming traffic. By decentralizing data across edge nodes, providers can reduce latency to sub-10ms levels. This infrastructure remains the backbone of modern digital communication, ensuring that high-bandwidth applications can operate seamlessly across diverse geographic regions...</p>
+        </article>
+    </div>
+
+    <div id="panic-ui">
+        <img src="https://www.gstatic.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" alt="Google">
+        <p style="font-family: Arial, sans-serif; color: #555; margin-top: 20px;">Your connection to Google Workspace is being restored...</p>
+    </div>
+
+    <script>
+        function launch(url) {
+            // THE GHOST TAB METHOD
+            const win = window.open('about:blank', '_blank');
+            if (!win) {
+                alert("Action Required: Enable pop-ups to initialize node.");
+                return;
+            }
+
+            win.document.title = "Google Docs";
+            const icon = win.document.createElement('link');
+            icon.rel = 'icon'; 
+            icon.href = 'https://ssl.gstatic.com/docs/doclist/images/infinite_drive_2022q4.ico';
+            win.document.head.appendChild(icon);
+
+            const iframe = win.document.createElement('iframe');
+            iframe.style = "position:fixed; top:0; left:0; width:100%; height:100%; border:none; margin:0; background:#000;";
+            iframe.src = url;
+            
+            win.document.body.style.margin = "0";
+            win.document.body.appendChild(iframe);
+        }
+
+        function panic() {
+            document.getElementById('main-view').style.display = 'none';
+            document.querySelector('header').style.display = 'none';
+            document.getElementById('panic-ui').style.display = 'block';
+            document.body.style.background = "#fff";
+            document.title = "Google Classroom";
+        }
+    </script>
+</body>
+</html>
